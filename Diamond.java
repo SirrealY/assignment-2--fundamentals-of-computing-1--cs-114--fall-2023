@@ -36,19 +36,28 @@ public class Diamond {
     }
   } else {
       int vertical = input / 2;
-      for(i =0;i <= vertical;i++) {
-        for(spaces = 1; spaces <= vertical - i;spaces++) {
-          System.out.print(" ");
+      for(i = 0;i < vertical;i++) {
+        for(spaces = vertical; spaces > i;spaces--) {
+          System.out.print("  ");
         }
-      }  for(int j=1;j<=2*i+1;j++) {
+        for(int j = 0;j < 2 * i + 1 ;j++) {
           System.out.print(" *");
-          }
-      System.out.println();
-      for(i=vertical-1;i>=0;i--) {
-        for(spaces = 1;spaces<=vertical - i;spaces++){
-
         }
+        System.out.println();
+      }
+      for(i = 0; i < vertical - 3;i++) {
+        System.out.print(" *");
+      }
+      for(i = vertical - 1;i >= 0;i--) {
+        for(spaces = vertical;spaces > i;spaces--){
+          System.out.print("  ");
+        }
+        for (int j = 0; j < 2 * i + 1;j++) {
+          System.out.print(" *");
+        }
+        System.out.println();
+      }
+
       }
     }
   }
-}
