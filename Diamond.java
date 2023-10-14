@@ -12,7 +12,7 @@ public class Diamond {
 
   input = scan.nextInt();
 
-  if (input % 2 == 1 ){;// Checks if user input is odd or even
+  if (input % 2 == 1 ){// Checks if user input is odd or even
     int height = input/2;
     //Prints top half of diamond
     for(i=0;i<=height;i++){
@@ -34,14 +34,21 @@ public class Diamond {
       }
       System.out.println();
     }
-  }
-  else
-    System.out.println("even ");
+  } else {
+      int vertical = input / 2;
+      for(i =0;i <= vertical;i++) {
+        for(spaces = 1; spaces <= vertical - i;spaces++) {
+          System.out.print(" ");
+        }
+      }  for(int j=1;j<=2*i+1;j++) {
+          System.out.print(" *");
+          }
+      System.out.println();
+      for(i=vertical-1;i>=0;i--) {
+        for(spaces = 1;spaces<=vertical - i;spaces++){
 
-
+        }
+      }
     }
-
-
-
-
   }
+}
