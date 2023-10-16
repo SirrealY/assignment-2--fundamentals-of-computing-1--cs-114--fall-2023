@@ -47,10 +47,10 @@ public class Diamond {
       //Top of diamond
       for(row = 0;row < vertical ;row++) {
         for(spaces = vertical - 1 ; spaces > row;spaces--) {
-          System.out.print("  ");
+          System.out.print("  ");//Prints Spaces
         }
         for(column = 0;column <= stars;column++) {
-          System.out.print(" *");
+          System.out.print(" *");//Prints Stars
         }
         System.out.println();
         stars += 2;//Increment by 2
@@ -58,7 +58,7 @@ public class Diamond {
       //Bottom of diamond
       for(row = vertical - 2 ;row >=0;row--) {
         for(spaces = vertical - 1 ;spaces > row ;spaces--){
-          System.out.print("  ");
+          System.out.print("  ");//Print Space
         }
         if (row==0) {
           stars = 2 + 1 * row;
