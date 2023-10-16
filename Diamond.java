@@ -43,23 +43,32 @@ public class Diamond {
         for(spaces = vertical - 1; spaces > i;spaces--) {
           System.out.print("  ");
         }
+        if (i==0){
+          stars = 2 + 1 * i;
+        } else {
+          stars = 2 + 2 * i;
+        }
         for(j = 0;j < stars;j++) {
           System.out.print(" *");
         }
         System.out.println();
         stars += 2;
       }
-      //Middle of diamond
-      for(i = 0; i < input;i++) {
+      //Middle of Diamond
+      for(j = 0; j < input;j++) {
         System.out.print(" *");
       }
       System.out.println();
-
       //Bottom of diamond
       stars-=2;
       for(i = vertical - 1;i >= 0;i--) {
         for(spaces = vertical - 1;spaces > i ;spaces--){
           System.out.print("  ");
+        }
+        if (i==0) {
+          stars = 2+ 1 * i;
+        } else {
+          stars = 2 + 2 * i;
         }
         for (j = 0; j < stars ;j++) {
           System.out.print(" *");
