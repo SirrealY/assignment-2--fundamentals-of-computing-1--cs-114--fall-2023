@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Diamond {
   public static void main(String[] args) {
     int input;
-    int i;
+    int row;
     int spaces;
-    int j;
+    int column;
     int stars = 1;
     int aster;
 
@@ -18,59 +18,60 @@ public class Diamond {
   if (input % 2 == 1 ){// Checks if user input is odd or even
     int height = input/2;
     //Prints top half of diamond
-    for(i = 0;i <= height;i++){
-      for(spaces = 1;spaces<=height-i;spaces++){
+    for(row = 0;row <= height;row++){
+      for(spaces = 1;spaces<=height-row;spaces++){
         System.out.print(" ");
       }
-      for(j=1;j<=2*i+1;j++){
+      for(column=1;column<=2*row+1;column++){
         System.out.print("*");
       }
       System.out.println();
     }
    //Bottom half of diamond
-    for(i=height-1;i>=0;i--){
-      for(spaces = 1;spaces<=height-i;spaces++){
+    for(row=height-1;row>=0;row--){
+      for(spaces = 1;spaces<=height-row;spaces++){
         System.out.print(" ");
       }
-      for(j=1;j<=2*i+1;j++){
+      for(column=1;column<=2*row+1;column++){
         System.out.print("*");
       }
       System.out.println();
     }
   } else {
+    //Prints first star
     for(aster = 0; aster < (input/2)-1; aster++){
       System.out.print("  ");
     }
     System.out.println("  *");
       int vertical = input / 2;
       //Top of diamond
-      for(i = 0;i < vertical ;i++) {
-        for(spaces = vertical - 1 ; spaces > i;spaces--) {
+      for(row = 0;row < vertical ;row++) {
+        for(spaces = vertical - 1 ; spaces > row;spaces--) {
           System.out.print("  ");
         }
-        for(j = 0;j <= stars;j++) {
+        for(column = 0;column <= stars;column++) {
           System.out.print(" *");
         }
         System.out.println();
-        stars += 2;
+        stars += 2;//Increment by 2
       }
-
       //Bottom of diamond
-      for(i = vertical - 2 ;i >=0;i--) {
-        for(spaces = vertical - 1 ;spaces > i ;spaces--){
+      for(row = vertical - 2 ;row >=0;row--) {
+        for(spaces = vertical - 1 ;spaces > row ;spaces--){
           System.out.print("  ");
         }
-        if (i==0) {
-          stars = 2 + 1 * i;
+        if (row==0) {
+          stars = 2 + 1 * row;
         } else {
-          stars = 2 + 2 * i;
+          stars = 2 + 2 * row;
         }
-        for (j = 0; j < stars ;j++) {
+        for (column = 0; column < stars ;column++) {
           System.out.print(" *");
         }
         System.out.println();
-        stars-=2;
+        stars-=2;//Decrement by 2
       }
+      //Prints last star
       for (aster = 0; aster < (input/2)-1; aster++){
         System.out.print("  ");
       }
