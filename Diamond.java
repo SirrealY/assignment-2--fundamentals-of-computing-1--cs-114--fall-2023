@@ -7,6 +7,7 @@ public class Diamond {
     int spaces;
     int j;
     int stars = 1;
+    int aster;
 
   Scanner scan = new Scanner(System.in);
 
@@ -37,6 +38,10 @@ public class Diamond {
       System.out.println();
     }
   } else {
+    for(aster = 0; aster < (input/2)-1; aster++){
+      System.out.print("  ");
+    }
+    System.out.println("  *");
       int vertical = input / 2;
       //Top of diamond
       for(i = 0;i < vertical ;i++) {
@@ -49,13 +54,9 @@ public class Diamond {
         System.out.println();
         stars += 2;
       }
-      //Middle of Diamond
-      for(i = 0; i < input;i++) {
-        System.out.print(" *");
-      }
-      System.out.println();
+
       //Bottom of diamond
-      for(i = vertical - 1 ;i >= 0;i--) {
+      for(i = vertical - 2 ;i >=0;i--) {
         for(spaces = vertical - 1 ;spaces > i ;spaces--){
           System.out.print("  ");
         }
@@ -70,6 +71,10 @@ public class Diamond {
         System.out.println();
         stars-=2;
       }
+      for (aster = 0; aster < (input/2)-1; aster++){
+        System.out.print("  ");
+      }
+      System.out.println("  *");
 scan.close();}
   }
 }
