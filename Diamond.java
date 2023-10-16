@@ -17,8 +17,8 @@ public class Diamond {
   if (input % 2 == 1 ){// Checks if user input is odd or even
     int height = input/2;
     //Prints top half of diamond
-    for(i=0;i<=height;i++){
-      for(spaces=1;spaces<=height-i;spaces++){
+    for(i = 0;i <= height;i++){
+      for(spaces = 1;spaces<=height-i;spaces++){
         System.out.print(" ");
       }
       for(j=1;j<=2*i+1;j++){
@@ -39,34 +39,28 @@ public class Diamond {
   } else {
       int vertical = input / 2;
       //Top of diamond
-      for(i = 0;i < vertical;i++) {
-        for(spaces = vertical - 1; spaces > i;spaces--) {
+      for(i = 0;i < vertical ;i++) {
+        for(spaces = vertical - 1 ; spaces > i;spaces--) {
           System.out.print("  ");
         }
-        if (i==0){
-          stars = 2 + 1 * i;
-        } else {
-          stars = 2 + 2 * i;
-        }
-        for(j = 0;j < stars;j++) {
+        for(j = 0;j <= stars;j++) {
           System.out.print(" *");
         }
         System.out.println();
         stars += 2;
       }
       //Middle of Diamond
-      for(j = 0; j < input;j++) {
+      for(i = 0; i < input;i++) {
         System.out.print(" *");
       }
       System.out.println();
       //Bottom of diamond
-      stars-=2;
-      for(i = vertical - 1;i >= 0;i--) {
-        for(spaces = vertical - 1;spaces > i ;spaces--){
+      for(i = vertical - 1 ;i >= 0;i--) {
+        for(spaces = vertical - 1 ;spaces > i ;spaces--){
           System.out.print("  ");
         }
         if (i==0) {
-          stars = 2+ 1 * i;
+          stars = 2 + 1 * i;
         } else {
           stars = 2 + 2 * i;
         }
@@ -76,6 +70,6 @@ public class Diamond {
         System.out.println();
         stars-=2;
       }
-    }
+scan.close();}
   }
 }
